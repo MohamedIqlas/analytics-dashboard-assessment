@@ -1,0 +1,230 @@
+/* Header container styles */
+.header-container {
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  background-color: #f4f4f9;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  font-family: Arial, sans-serif;
+  flex-wrap: wrap; /* Allow elements to wrap on smaller screens */
+}
+
+.stat-card {
+  background-color: #fff;
+  padding: 10px 15px;
+  border-radius: 6px;
+  font-weight: bold;
+  font-size: 16px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  margin-right: 15px; /* Space between stat cards */
+  margin-bottom: 10px; /* Space between stat cards on smaller screens */
+}
+
+@media (max-width: 992px) {
+  /* For tablets */
+  .header-container {
+    flex-direction: column; /* Stack items vertically on smaller screens */
+    align-items: flex-start; /* Align to the left */
+  }
+
+  .stat-card {
+    font-size: 14px; /* Reduce font size on smaller screens */
+    margin-right: 0;
+    width: 100%; /* Make stat cards take full width */
+    margin-bottom: 15px; /* Add bottom margin for spacing */
+    text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+  /* For mobile screens */
+  .header-container {
+    padding: 15px; /* Adjust padding for smaller devices */
+  }
+
+  .stat-card {
+    font-size: 14px; /* Adjust font size further for mobile */
+    padding: 20px 0px; /* Reduce padding */
+    width: 100%; /* Make stat cards take full width */
+    margin-bottom: 10px; /* Add bottom margin for spacing */
+    text-align: center;
+  }
+}
+
+
+/* Dashboard Styles */
+
+.dashboard-container {
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f9;
+}
+
+.chart-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  margin-bottom: 30px;
+}
+
+.chart-card {
+  flex: 1;
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+.table-card {
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+  /* For mobile screens */
+  .chart-container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-bottom: 30px;
+  }
+  .chart-card {
+    flex: 1;
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+}
+/* Table Styles */
+
+/* Table container styles */
+.table-container {
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  overflow-x: auto; /* Allow horizontal scrolling on small screens */
+}
+
+/* Filter styles */
+.filters {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 20px;
+  flex-wrap: wrap; /* Wrap filters if there's not enough space */
+}
+
+.filter-input, .filter-select, .sort-button {
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  width: 200px; /* Set default width for filters */
+}
+
+/* Table styles */
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  min-width: 600px; /* Minimum width for the table */
+}
+
+.table th, .table td {
+  padding: 12px 15px;
+  text-align: left;
+  border: 1px solid #ddd;
+}
+
+.table th {
+  background-color: #f4f4f9;
+  font-weight: bold;
+}
+
+.table td {
+  font-size: 14px;
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+  /* For tablets */
+  .filters {
+    flex-direction: column; /* Stack the filters vertically */
+    align-items: flex-start;
+  }
+
+  .filter-input, .filter-select, .sort-button {
+    width: 100%; /* Make the filter inputs take full width */
+    margin-bottom: 10px; /* Add spacing between inputs */
+  }
+
+  .table th, .table td {
+    font-size: 12px; /* Reduce font size for tablet screens */
+  }
+}
+
+@media (max-width: 768px) {
+  /* For mobile screens */
+  .filters {
+    gap: 10px;
+  }
+
+  .filter-input, .filter-select, .sort-button {
+    font-size: 12px; /* Adjust font size for mobile */
+    padding: 6px 10px; /* Adjust padding */
+    margin-bottom: 8px; /* Reduce margin between fields */
+  }
+
+  .table th, .table td {
+    font-size: 12px; /* Further reduce font size for mobile */
+  }
+
+  .table-container {
+    overflow-x: auto; /* Add horizontal scroll for the table */
+  }
+
+  /* Make the table horizontally scrollable */
+  .table {
+    min-width: 600px; /* Set minimum width to prevent table collapse */
+  }
+}
+
+
+/* Loading spinner */
+.loading-spinner {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+}
+
+.spinner1 {
+  border: 0px solid #f3f3f3; /* Light grey */
+  border-top: 100px solid #3498db; /* Blue color */
+  border-radius: 50%;
+  width: 5px;
+  height: 50px;
+  animation: spin 5s reverse linear infinite;
+}
+.spinner2 {
+  border: 0px solid #f3f3f3; /* Light grey */
+  border-top: 100px solid #db7c34; /* Blue color */
+  border-radius: 50%;
+  width: 5px;
+  height: 50px;
+  animation: spin 5s linear infinite;
+}
+
+/* Keyframes for spinning effect */
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
